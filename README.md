@@ -1,11 +1,11 @@
-# ROS2 Bunker control
+# ROS2 Bunker Control
 
 
 ## Setup
 
 ### Download
 
-Requirments are [ROS2 jazzy]( (newer should also work) and:
+Requirments are [ROS2 jazzy](https://docs.ros.org/en/jazzy/Installation.html) (newer should also work) and:
 ```bash
 sudo apt install build-essential git cmake libasio-dev can-utils
 ```
@@ -20,7 +20,9 @@ git submodule update --init --remote --recursive
 ```
 or follow the instruction from [agilexrobotics/bunker_ros2](https://github.com/agilexrobotics/bunker_ros2) for `src`.
 
-Init CAN2USB adapter once with:
+---
+
+Also init CAN2USB adapter once with, if not done before:
 ```bash
 bash src/ugv_sdk/scripts/setup_can2usb.bash
 ```
