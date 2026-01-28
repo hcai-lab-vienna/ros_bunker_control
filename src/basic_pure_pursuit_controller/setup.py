@@ -25,7 +25,8 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'controller = basic_pure_pursuit_controller.controller:main'
+            'controller = basic_pure_pursuit_controller.controller:main',
+            'follow_path_client = basic_pure_pursuit_controller.follow_path_client:main'
         ],
     },
 )

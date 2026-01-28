@@ -9,7 +9,7 @@ from geometry_msgs.msg import PoseStamped
 class FollowPathActionClient(Node):
 
     def __init__(self):
-        super().__init__('fibonacci_action_client')
+        super().__init__('follow_path_action_client')
         self._action_client = ActionClient(self, FollowPath, 'follow_path')
 
     def send_goal(self):
@@ -28,13 +28,10 @@ class FollowPathActionClient(Node):
 
 def main(args=None):
     try:
-        with rclpy.init(args=args):
-
-            action_client = FollowPathActionClient()
-
-            future = action_client.send_goal()
-
-            rclpy.spin_until_future_complete(action_client, future)
+        rclpy.init(args=args)
+        action_client = FollowPathActionClient()
+        future = action_client.send_goal()
+        rclpy.spin_until_future_complete(action_client, future)
     except (KeyboardInterrupt, ExternalShutdownException):
         pass
 
