@@ -9,6 +9,10 @@ Requirments are [ROS2 jazzy](https://docs.ros.org/en/jazzy/Installation.html) (n
 ```bash
 sudo apt install build-essential git cmake libasio-dev can-utils
 ```
+and
+```bash
+sudo apt install ros-jazzy-nav2-msgs
+```
 
 First clone repo with all submodules:
 ```bash
