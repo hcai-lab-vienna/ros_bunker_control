@@ -45,7 +45,7 @@ class PurePursuitController(Node):
         self.declare_parameter('cmd_topic', '/cmd_vel')
         self.declare_parameter('cmd_frame_id', 'base_link')
         self.declare_parameter('stop_when_no_goal', True)
-        self.declare_parameter('publish_twist_stamped', True)
+        self.declare_parameter('publish_twist_stamped', False)
 
         self.Ld = float(self.get_parameter('lookahead_distance').value)
         self.v_des = float(self.get_parameter('desired_speed').value)
