@@ -40,7 +40,7 @@ class PurePursuitController(Node):
         self.declare_parameter('max_angular_speed', 1.2)      # rad/s
         self.declare_parameter('goal_tolerance', 0.1)         # m
         self.declare_parameter('control_rate', 30.0)          # Hz
-        self.declare_parameter('odom_topic', '/nav/odom')
+        self.declare_parameter('odom_topic', '/odom')
         self.declare_parameter('goal_topic', '/controller_goal')
         self.declare_parameter('cmd_topic', '/cmd_vel')
         self.declare_parameter('cmd_frame_id', 'base_link')
